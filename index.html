@@ -9,6 +9,24 @@
     
     <!-- Enlace Técnico al Favicon -->
     <link rel="icon" type="image/webp" href="favicon.webp">
+
+    <!-- Código de Google Analytics Fijo (Para detección inmediata del ID) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ7P87SGPV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Si el usuario ya rechazó las cookies antes, bloqueamos el rastreo por defecto
+      if (localStorage.getItem('cookie_consent') === 'false') {
+          gtag('consent', 'default', {
+              'analytics_storage': 'denied'
+          });
+      }
+      
+      gtag('js', new Date());
+      gtag('config', 'G-FZ7P87SGPV', { 'anonymize_ip': true });
+    </script>
     
     <style>
         :root {
@@ -61,7 +79,7 @@
         
         footer { margin-top: 50px; text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
 
-        /* Estilos del Banner de Analytics Nnativo */
+        /* Estilos del Banner de Cookies */
         #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #11141a; color: #ffffff; padding: 15px 20px; display: none; justify-content: space-between; align-items: center; border-top: 2px solid var(--oro); z-index: 9999; font-size: 0.9rem; box-shadow: 0 -5px 25px rgba(0,0,0,0.8); }
         .cookie-text { max-width: 70%; text-align: left; line-height: 1.4; color: #c5c6c7; }
         .cookie-btns { display: flex; gap: 10px; }
@@ -188,7 +206,7 @@
                 <img src="purificacion-remolino-fuego.webp" alt="Fuego sagrado ritual de purificación y transmutación energética avanzada para corte de daños" width="820" height="380" loading="lazy">
             </div>
             <h2>Limpiezas Espirituales con Protocolo "Remolino de Fuego"</h2>
-            <p>Para aquellos estados de afectación severa, estancamiento crónico o bloqueos destructivos que no han cedido ante limpiezas comunes, se requiere un impacto de transmutación radical. El Protocolo Remolino de Fuego represents una intervención esotérica de élite y máxima potencia. Este proceso actúa desintegrando por completo las estructuras parasitarias, larvas energéticas, envidias densas o cualquier trabajo de magia oscura que intente vulnerar tu entorno. Mediante la fuerza purificadora del elemento ígneo, se ejecuta un corte definitivo de influencias negativas para restablecer la fuerza vital y la claridad existencial de manera inmediata.</p>
+            <p>Para aquellos estados de afectación severa, estancamiento crónico o bloqueos destructivos que no han cedido ante limpiezas comunes, se requiere un impacto de transmutación radical. El Protocolo Remolino de Fuego representa una intervención esotérica de élite y máxima potencia. Este proceso actúa desintegrando por completo las estructuras parasitarias, larvas energéticas, envidias densas o cualquier trabajo de magia oscura que intente vulnerar tu entorno. Mediante la fuerza purificadora del elemento ígneo, se ejecuta un corte definitivo de influencias negativas para restablecer la fuerza vital y la claridad existencial de manera inmediata.</p>
             
             <div class="enlaces-satelite">
                 <a href="https://www.babalawozoroastro.com/metodologia-de-trabajo" target="_blank" rel="noopener">Metodología del Remolino de Fuego</a>
@@ -232,36 +250,27 @@
         </div>
     </div>
 
-    <!-- Script de Activación Asíncrona de Google Analytics sin bloquear renderizado -->
+    <!-- Script de Lógica del Banner de Consentimiento -->
     <script>
-        const GA_ID = 'G-FZ7P87SGPV';
-
         window.onload = function() {
             if (!localStorage.getItem('cookie_consent')) {
                 document.getElementById('cookie-banner').style.display = 'flex';
-            } else if (localStorage.getItem('cookie_consent') === 'true') {
-                cargarAnalytics();
             }
         };
 
         function gestionarCookies(aceptadas) {
             localStorage.setItem('cookie_consent', aceptadas ? 'true' : 'false');
             document.getElementById('cookie-banner').style.display = 'none';
+            
             if (aceptadas) {
-                cargarAnalytics();
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            } else {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'denied'
+                });
             }
-        }
-
-        function cargarAnalytics() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-            document.head.appendChild(script);
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', GA_ID, { 'anonymize_ip': true });
         }
     </script>
 
