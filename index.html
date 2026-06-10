@@ -7,6 +7,9 @@
     <meta name="description" content="Portal independiente de orientación esotérica. Auditoría, análisis y derivación a servicios legítimos de alta hechicería, transmutación y sanación.">
     <link rel="canonical" href="https://antonapr.com/">
     
+    <!-- Enlace Técnico al Favicon -->
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    
     <style>
         :root {
             --bg-principal: #0b0c10;
@@ -25,7 +28,6 @@
         .subtitulo-admin { max-width: 850px; margin: 0 auto; font-size: 1.1rem; text-align: justify; color: var(--texto-claro); }
         .subtitulo-admin a { color: var(--oro); text-decoration: none; font-weight: bold; }
         
-        /* Contenedores de Imágenes Optimizados */
         .contenedor-img { width: 100%; text-align: center; margin-bottom: 20px; }
         .contenedor-img img { width: 100%; height: auto; max-height: 380px; object-fit: cover; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 5px 15px rgba(0,0,0,0.6); }
         .img-portada { max-width: 900px; margin: 30px auto 10px auto; padding: 0 20px; }
@@ -53,22 +55,33 @@
         .btn-fuego { background-color: #ff4500; color: #ffffff; }
         .btn-fuego:hover { background-color: #ff6347; }
         
-        /* Sección EEAT Reducida para Discreción Humana (Tamaño 12) */
         .seccion-eeat { background-color: #0b0c10; padding: 20px; border-radius: 6px; border: 1px solid rgba(197, 160, 89, 0.05); margin-top: 40px; }
         .seccion-eeat h3 { color: rgba(197, 160, 89, 0.4); margin-bottom: 8px; font-size: 13px; font-weight: 600; }
         .seccion-eeat p { font-size: 12px; margin-bottom: 0; color: rgba(161, 162, 163, 0.35); text-align: justify; line-height: 1.4; }
         
         footer { margin-top: 50px; text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+
+        /* Estilos del Banner de Analytics Nnativo */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #11141a; color: #ffffff; padding: 15px 20px; display: none; justify-content: space-between; align-items: center; border-top: 2px solid var(--oro); z-index: 9999; font-size: 0.9rem; box-shadow: 0 -5px 25px rgba(0,0,0,0.8); }
+        .cookie-text { max-width: 70%; text-align: left; line-height: 1.4; color: #c5c6c7; }
+        .cookie-btns { display: flex; gap: 10px; }
+        .btn-cookie { padding: 8px 18px; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
+        .btn-accept { background-color: var(--oro); color: #000000; }
+        .btn-accept:hover { background-color: var(--oro-hover); }
+        .btn-deny { background-color: #2f3e46; color: #ffffff; }
+        .btn-deny:hover { background-color: #354f52; }
         
         @media (max-width: 768px) {
             h1 { font-size: 1.7rem; }
             .bloque { padding: 25px; }
             .btn { display: block; width: 100%; }
             .enlaces-satelite a { display: block; margin-bottom: 10px; }
+            #cookie-banner { flex-direction: column; text-align: center; gap: 15px; padding: 20px; }
+            .cookie-text { max-width: 100%; }
+            .cookie-btns { width: 100%; justify-content: center; }
         }
     </style>
 
-    <!-- JSON-LD Técnico: Estructura de Guía y Directorio de Negocios Independientes -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -156,7 +169,6 @@
 
         <!-- BLOQUE 1: MAESTRO SAN BENITO -->
         <section class="bloque b1">
-            <!-- IMAGEN 2: ALTA HECHICERÍA -->
             <div class="contenedor-img">
                 <img src="altar-alta-hechiceria.webp" alt="Altar mayor ceremonial solemne de alta hechicería para la resolución de causas y pedimentos difíciles" width="820" height="380" loading="lazy">
             </div>
@@ -172,12 +184,11 @@
 
         <!-- BLOQUE 2: REMOLINO DE FUEGO -->
         <section class="bloque b2">
-            <!-- IMAGEN 3: REMOLINO DE FUEGO -->
             <div class="contenedor-img">
                 <img src="purificacion-remolino-fuego.webp" alt="Fuego sagrado ritual de purificación y transmutación energética avanzada para corte de daños" width="820" height="380" loading="lazy">
             </div>
             <h2>Limpiezas Espirituales con Protocolo "Remolino de Fuego"</h2>
-            <p>Para aquellos estados de afectación severa, estancamiento crónico o bloqueos destructivos que no han cedido ante limpiezas comunes, se requiere un impacto de transmutación radical. El Protocolo Remolino de Fuego representa una intervención esotérica de élite y máxima potencia. Este proceso actúa desintegrando por completo las estructuras parasitarias, larvas energéticas, envidias densas o cualquier trabajo de magia oscura que intente vulnerar tu entorno. Mediante la fuerza purificadora del elemento ígneo, se ejecuta un corte definitivo de influencias negativas para restablecer la fuerza vital y la claridad existencial de manera inmediata.</p>
+            <p>Para aquellos estados de afectación severa, estancamiento crónico o bloqueos destructivos que no han cedido ante limpiezas comunes, se requiere un impacto de transmutación radical. El Protocolo Remolino de Fuego represents una intervención esotérica de élite y máxima potencia. Este proceso actúa desintegrando por completo las estructuras parasitarias, larvas energéticas, envidias densas o cualquier trabajo de magia oscura que intente vulnerar tu entorno. Mediante la fuerza purificadora del elemento ígneo, se ejecuta un corte definitivo de influencias negativas para restablecer la fuerza vital y la claridad existencial de manera inmediata.</p>
             
             <div class="enlaces-satelite">
                 <a href="https://www.babalawozoroastro.com/metodologia-de-trabajo" target="_blank" rel="noopener">Metodología del Remolino de Fuego</a>
@@ -188,7 +199,6 @@
 
         <!-- BLOQUE 3: LIMPIA ESPIRITUAL TRADICIONAL -->
         <section class="bloque b3">
-            <!-- IMAGEN 4: SANACIÓN TRADICIONAL -->
             <div class="contenedor-img">
                 <img src="sanacion-espiritual-tradicional.webp" alt="Elementos tradicionales de sanación espiritual y transmutación áurica armoniosa con videncia" width="820" height="380" loading="lazy">
             </div>
@@ -202,7 +212,6 @@
             <a href="https://www.limpiaespiritual.com/" class="btn" style="background-color: #00f2fe; color: #000000;" target="_blank" rel="noopener">➔ Ir a Limpia Espiritual Tradicional</a>
         </section>
 
-        <!-- SECCIÓN EEAT Y YMYL ADAPTADA (LETRA TAMAÑO 12 Y MUY DISCRETA) -->
         <section class="seccion-eeat">
             <h3>Declaración de Transparencia e Idoneidad Profesional (EEAT / YMYL)</h3>
             <p>Este sitio web (Antonapr.com) opera bajo estrictos criterios de responsabilidad y supervisión administrativa. Reconocemos que las consultas relacionadas con el equilibrio energético, el bienestar espiritual y la guía esotérica impactan la tranquilidad y estabilidad emocional de nuestros usuarios. Por ello, este directorio no realiza prácticas rituales de forma directa ni centraliza fondos; su única función es validar, auditar la vigencia técnica y derivar el tráfico hacia tres plataformas independientes, legítimas y con metodologías claramente diferenciadas. La elección de cada servicio es responsabilidad del usuario, garantizando un entorno seguro y libre de duplicidad operativa.</p>
@@ -213,6 +222,48 @@
     <footer>
         <p>&copy; 2026 Centro Especializado de soluciones para la Vida, el Futuro y el Éxito. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- HTML del Banner de Cookies -->
+    <div id="cookie-banner">
+        <div class="cookie-text">Utilizamos cookies de análisis para entender cómo interactúa con nuestro portal y optimizar la derivación de consultas de forma segura.</div>
+        <div class="cookie-btns">
+            <button class="btn-cookie btn-deny" onclick="gestionarCookies(false)">Denegar</button>
+            <button class="btn-cookie btn-accept" onclick="gestionarCookies(true)">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Script de Activación Asíncrona de Google Analytics sin bloquear renderizado -->
+    <script>
+        const GA_ID = 'G-FZ7P87SGPV';
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookie_consent')) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            } else if (localStorage.getItem('cookie_consent') === 'true') {
+                cargarAnalytics();
+            }
+        };
+
+        function gestionarCookies(aceptadas) {
+            localStorage.setItem('cookie_consent', aceptadas ? 'true' : 'false');
+            document.getElementById('cookie-banner').style.display = 'none';
+            if (aceptadas) {
+                cargarAnalytics();
+            }
+        }
+
+        function cargarAnalytics() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', GA_ID, { 'anonymize_ip': true });
+        }
+    </script>
 
 </body>
 </html>
