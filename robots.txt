@@ -1,4 +1,26 @@
+# ====================================================================
+# ROBOTS.TXT OFICIAL Y LIMPIO - ANTONAPR.COM
+# ====================================================================
+
 User-agent: *
 Allow: /
 
-Sitemap: https://antonapr.com/sitemap.xml
+# BLOCK GPTBOT: Evita que usen tu contenido gratis para entrenar modelos sin darte clics
+User-agent: GPTBot
+Disallow: /
+
+# ALLOW SEARCH BOTS: Permite buscadores de IA que mandan tráfico directo
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemaps oficiales para Google
+Sitemap: https://www.antonapr.com/sitemap.xml
